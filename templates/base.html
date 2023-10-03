@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <title>Adopt</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sketchy/bootstrap.min.css" integrity="sha384-RxqHG2ilm4r6aFRpGmBbGTjsqwfqHOKy1ArsMhHusnRO47jcGqpIQqlQK/kmGy9R" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/adopt.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Adopt!</a>
+</nav>
+
+<div class="container">
+
+  {% for msg in get_flashed_messages() %}
+  <div class="alert alert-info">{{ msg }}</div>
+  {% endfor %}
+
+  {% block content %}
+  {% endblock %}
+
+</div>
+
+</body>
+</html>
